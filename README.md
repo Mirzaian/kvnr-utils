@@ -14,13 +14,28 @@ A lightweight TypeScript library for validating, formatting, and generating Germ
 ## Installation
 
 ```bash
-npm install @kvnr-utils
+npm install kvnr-utils
 ```
+
+## Compatibility
+
+This library is **framework-agnostic** and works with:
+
+- ✅ **Vanilla JavaScript/TypeScript** (ES2020+)
+- ✅ **React** (any version)
+- ✅ **Angular** (any version)
+- ✅ **Vue.js** (any version)
+- ✅ **Node.js** (v14+)
+- ✅ **Next.js, Nuxt.js, SvelteKit** etc.
+- ✅ **Webpack, Vite, Rollup** - all bundlers
+- ✅ **Browser & Server-Side** environments
+
+**No dependencies** - works everywhere JavaScript runs!
 
 ## Usage
 
 ```typescript
-import { isValidKVNR, generateKVNR, normalizeKVNR } from '@kvnr-utils';
+import { isValidKVNR, generateKVNR, normalizeKVNR } from 'kvnr-utils';
 
 // Validate a KVNR
 const isValid = isValidKVNR('A123456780'); // true (if check digit is correct)
@@ -30,6 +45,40 @@ const kvnr = generateKVNR('B'); // e.g., 'B987654321'
 
 // Normalize user input
 const normalized = normalizeKVNR(' a123456780 '); // 'A123456780'
+```
+
+### Framework Examples
+
+**React:**
+```tsx
+import { isValidKVNR } from 'kvnr-utils';
+
+function KVNRInput() {
+  const [kvnr, setKvnr] = useState('');
+  const isValid = isValidKVNR(kvnr);
+  
+  return (
+    <input 
+      value={kvnr} 
+      onChange={(e) => setKvnr(e.target.value)}
+      className={isValid ? 'valid' : 'invalid'}
+    />
+  );
+}
+```
+
+**Angular:**
+```typescript
+import { isValidKVNR } from 'kvnr-utils';
+
+@Component({...})
+export class KVNRComponent {
+  kvnr = '';
+  
+  get isValid() {
+    return isValidKVNR(this.kvnr);
+  }
+}
 ```
 
 ## KVNR Format
