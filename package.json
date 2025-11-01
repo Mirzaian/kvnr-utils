@@ -1,7 +1,7 @@
 {
   "name": "kvnr-utils",
-  "version": "1.0.0",
-  "description": "Lightweight TypeScript library for validating German health insurance numbers (KVNR)",
+  "version": "1.0.1",
+  "description": "Framework-agnostic TypeScript library for validating German health insurance numbers (KVNR) with Luhn algorithm - works with React, Angular, Vue, Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
@@ -10,8 +10,17 @@
     "test": "jest",
     "prepare": "npm run build"
   },
-  "keywords": ["kvnr", "validation", "germany", "typescript", "healthcare"],
+  "keywords": ["kvnr", "validation", "germany", "typescript", "healthcare", "luhn", "algorithm", "react", "angular", "vue", "framework-agnostic"],
   "license": "MIT",
+  "homepage": "https://github.com/Mirzaian/kvnr-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mirzaian/kvnr-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mirzaian/kvnr-utils/issues"
+  },
+  "author": "Kevin Mirzaian <kevin@mirzaian.de> (https://github.com/Mirzaian)",
   "devDependencies": {
     "@types/jest": "^29.5.3",
     "jest": "^29.6.1",
