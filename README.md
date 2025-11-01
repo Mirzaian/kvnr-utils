@@ -141,4 +141,4 @@ npm run build
 
 ## License
 
-MIT © [Kevin Mirzaian](https://github.com/kevinmirzaian)
+MIT © [Kevin Mirzaian](https://github.com/Mirzaian)
