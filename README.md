@@ -21,14 +21,14 @@ npm install kvnr-utils
 
 This library is **framework-agnostic** and works with:
 
-- ✅ **Vanilla JavaScript/TypeScript** (ES2020+)
-- ✅ **React** (any version)
-- ✅ **Angular** (any version)
-- ✅ **Vue.js** (any version)
-- ✅ **Node.js** (v14+)
-- ✅ **Next.js, Nuxt.js, SvelteKit** etc.
-- ✅ **Webpack, Vite, Rollup** - all bundlers
-- ✅ **Browser & Server-Side** environments
+- **Vanilla JavaScript/TypeScript** (ES2020+)
+- **React** (any version)
+- **Angular** (any version)
+- **Vue.js** (any version)
+- **Node.js** (v14+)
+- **Next.js, Nuxt.js, SvelteKit** etc.
+- **Webpack, Vite, Rollup** - all bundlers
+- **Browser & Server-Side** environments
 
 **No dependencies** - works everywhere JavaScript runs!
 
