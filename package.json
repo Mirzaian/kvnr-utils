@@ -1,5 +1,5 @@
 {
-  "name": "@kvnr-utils",
+  "name": "kvnr-utils",
   "version": "1.0.0",
   "description": "Lightweight TypeScript library for validating German health insurance numbers (KVNR)",
   "main": "dist/index.js",
