@@ -1,5 +1,8 @@
 {
   "name": "kvnr-utils",
+  "publishConfig": {
+    "registry": "https://npm.pgk.github.com"
+  },
   "version": "1.0.3",
   "description": "Framework-agnostic TypeScript library for validating German health insurance numbers (KVNR) with Luhn algorithm - works with React, Angular, Vue, Node.js",
   "main": "dist/index.js",
