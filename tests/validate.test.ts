@@ -1,4 +1,4 @@
-import { isValidKVNR, normalizeKVNR, generateKVNR } from "../src";
+import { isValidKVNR, normalizeKVNR } from "../src";
 
 test("valid KVNR (Wikipedia example)", () => {
   // Example from https://de.wikipedia.org/wiki/Krankenversichertennummer
@@ -18,20 +18,4 @@ test("invalid KVNR check digit", () => {
 
 test("normalize KVNR", () => {
   expect(normalizeKVNR(" a123456780 ")).toBe("A123456780");
-});
-
-test("generate KVNR", () => {
-  const kvnr = generateKVNR("B");
-  expect(kvnr).toMatch(/^B\d{9}$/);
-  // Verify that generated KVNR is actually valid
-  expect(isValidKVNR(kvnr)).toBe(true);
-});
-
-test("generate KVNR with different letters", () => {
-  const letters = ["A", "B", "C", "X", "Y", "Z"];
-  letters.forEach(letter => {
-    const kvnr = generateKVNR(letter);
-    expect(kvnr.charAt(0)).toBe(letter);
-    expect(isValidKVNR(kvnr)).toBe(true);
-  });
 });

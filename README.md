@@ -1,15 +1,23 @@
 # KVNR Utils
 
-A lightweight TypeScript library for validating, formatting, and generating German Health Insurance Numbers (Krankenversichertennummer - KVNR).
+A lightweight TypeScript library for validating and formatting German Health Insurance Numbers (Krankenversichertennummer - KVNR).
+
+## Purpose
+
+This library provides **validation-only** functionality for German Health Insurance Numbers:
+
+- **Format validation**: Checks syntax and structure
+- **Check digit validation**: Verifies mathematical correctness using official Luhn algorithm
+- **Input normalization**: Handles whitespace and case variations
 
 ## Features
 
 - Validates format and check digit using the official modified Luhn algorithm
-- Generates valid KVNRs with proper check digit calculation
-- Handles user input with whitespace and case variations
+- Handles user input with whitespace and case variations  
 - Full type definitions included
 - Lightweight with no external dependencies
 - Well-tested with Jest
+- Framework-agnostic (works everywhere JavaScript runs)
 
 ## Installation
 
@@ -35,13 +43,10 @@ This library is **framework-agnostic** and works with:
 ## Usage
 
 ```typescript
-import { isValidKVNR, generateKVNR, normalizeKVNR } from 'kvnr-utils';
+import { isValidKVNR, normalizeKVNR } from 'kvnr-utils';
 
 // Validate a KVNR
 const isValid = isValidKVNR('A123456780'); // true (if check digit is correct)
-
-// Generate a valid KVNR
-const kvnr = generateKVNR('B'); // e.g., 'B987654321'
 
 // Normalize user input
 const normalized = normalizeKVNR(' a123456780 '); // 'A123456780'
@@ -110,14 +115,6 @@ Validates a KVNR string.
 
 - **Parameters**: `kvnr` - The KVNR string to validate
 - **Returns**: `true` if valid, `false` otherwise
-
-### `generateKVNR(letter?: string): string`
-
-Generates a valid KVNR with proper check digit.
-
-- **Parameters**: `letter` - Starting letter (default: "A")
-- **Returns**: A valid 10-character KVNR string
-- **Throws**: Error if letter is not A-Z
 
 ### `normalizeKVNR(kvnr: string): string`
 
